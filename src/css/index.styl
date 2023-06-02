@@ -1,0 +1,83 @@
+body,
+html {
+    font: 16px/1.4 Georgia, serif;
+}
+
+.page {
+    max-width 400px;
+    padding: 2rem;
+    margin: 0 auto;
+    text-align center;
+    user-select: none;
+    }
+
+h1 {
+    font: 2rem/1.2 sans-serif;
+    margin-bottom: 1em;
+}
+
+.game {
+    &Shuffle {
+        pointer-events: none;
+        opacity: 0.8;
+        }
+    }
+
+.fifteen {
+    width 100%;
+    padding-bottom: 100%;
+    background: rgb(202, 202, 202);
+    margin-bottom 1.5rem;
+    position relative
+    outline: 2px solid #000;
+
+    .item {
+        outline: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width 25%
+        height 25%
+        margin 0
+        padding 0
+        border none
+        background rgba(197, 84, 9, 0.881)
+        color white
+        font-size 2rem
+        cursor pointer
+        box-shadow: inset 1px 1px rgb(0, 0, 0)
+        transition: transform 0.2s, filter 0.5s;
+        border-radius: 25px;
+
+        &Val {
+            display flex
+            align-items center
+            justify-content center
+            width 84%
+            height 84%
+            margin 8%
+            box-shadow: inset 0 0 0 2px #fff
+            border-radius: 25px;
+            }
+    }
+    &Won {
+        .item {
+            filter: brightness(200%);
+            }
+        }
+}
+
+.button {
+    color #fff
+    background-color: #000
+    border none
+    cursor: pointer
+    padding 0.5em 1.5em
+    border-radius: 5px;
+    
+    &:hover {
+        background: #fea500
+        box-shadow: 3px 5px #000;
+        color #000
+        }
+    }
